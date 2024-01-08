@@ -1,0 +1,22 @@
+<p>students works!</p>
+<div>
+    <table>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Date de naissance</th>
+            <th>Genre</th>
+            <th>Frais de cours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Utiliser des cards voir exemple prof pour avoir une bonne mise en page-->
+            <app-student (evenement)="cliqueSupprimerEtudiant($event)" *ngFor="let student of STUDENTS" [std]="student">
+            </app-student>
+        </tbody>
+
+    </table>
+</div>
+<app-register-student (evenement) = "cliqueAjouterEtudiant($event)"></app-register-student>

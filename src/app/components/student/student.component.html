@@ -1,0 +1,45 @@
+<!---
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Date de naissance</th>
+        <th>Genre</th>
+        <th>Frais de cours</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of STUDENTS">
+        <td>{{ student.id | uppercase}}</td>
+        <td>{{ student | namePrefix}}</td>
+        <td>{{ student.dateOfBirth | date:'dd/MM/yyyy' }}</td>
+        <td>{{ student.gender | lowercase}}</td>
+        <td>{{ student.courseFee | currency:'USD':'symbol':'1.2-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+-->
+
+<!--
+<div class="w3-col s6">
+  <div class="card">
+      <img [src]="std?.picture" alt="Avatar">
+      <div class="container">
+          <h4><b>{{std?.name}}</b></h4>
+          <p>{{std?.dateOfBirth | date:'dd/MM/yyyy'}}</p>
+      </div>
+      <button (click)="supprEtudiant()">Supprimer</button>
+  </div>
+</div>
+-->
+
+<tr>
+  <td><img [src]="std?.picture" alt="Avatar"></td>
+  <td>{{ std?.id | uppercase}}</td>
+  <td>{{ std?.name}}</td>
+  <td>{{ std?.dateOfBirth | date:'dd/MM/yyyy' }}</td>
+  <td>{{ std?.gender | lowercase}}</td>
+  <td>{{ std?.coursFee | currency:'USD':'symbol':'1.2-2' }}</td>
+  <button (click)="supprEtudiant()">Supprimer</button>
+</tr>
